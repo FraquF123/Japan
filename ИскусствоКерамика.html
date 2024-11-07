@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Становление Японии</title>
+    <style>
+        @font-face {
+            font-family: 'SakuraFont';
+            src: url('path_to_your_font_file.ttf') format('truetype');
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 200vh;
+            margin: 0;
+            background: url('1.png') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+        }
+
+        /* Навигационное меню */
+        .menu-icon {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            font-size: 30px;
+            cursor: pointer;
+            color: #fff;
+            z-index: 10;
+        }
+
+        .nav-menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 250px;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            display: none;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            font-family: 'SakuraFont', sans-serif;
+            color: #fff;
+            z-index: 9;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+            
+        }
+
+        .nav-menu a {
+            font-size: 20px;
+            color: #fff;
+            text-decoration: none;
+            margin-bottom: -30px;
+            margin-top: 50px;
+            padding: 10px;
+            display: block;
+            width: 100%;
+            border-radius: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-menu a:hover {
+            background-color: #EA9EC4;
+        }
+
+        /* Основные стили страницы */
+        .footer {
+            text-align: left;
+            padding: 20px;
+            margin-bottom: 20px;
+            margin-top: 20px;
+            background-color: rgba(0, 0, 0, 0.6); /* Прозрачность через rgba */
+            position: relative;
+            bottom: 0;
+            width: 995px;
+            height: 1659px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start; /* Размещение текста и кнопок слева */
+            align-items: flex-start;
+            border-radius: 20px;
+            font-family: 'SakuraFont', sans-serif;
+            overflow: auto; /* Прокрутка */
+        }
+
+
+        .footer {
+            text-align: left;
+            padding: 20px;
+            margin-bottom: 20px;
+            margin-top: 20px;
+            background-color: rgba(0, 0, 0, 0.6); /* Прозрачность через rgba */
+            position: relative;
+            bottom: 0;
+            width: 995px;
+            height: 1100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start; /* Размещение текста и кнопок слева */
+            align-items: flex-start; 
+            border-radius: 20px;
+            font-family: 'SakuraFont', sans-serif;
+            overflow: auto; /* Прокрутка */
+        }
+
+        .footer-text {
+            font-family: 'SakuraFont', sans-serif;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .text-container {
+            text-align: center;
+            font-family: 'SakuraFont', sans-serif;
+            width: 900px;
+            height: 116px;
+            gap: 0px;
+            margin-top: 150px; /* Добавляем отступ сверху */
+        }
+
+        .main-text {
+            font-size: 48px;
+            font-weight: bold;
+        }
+
+        .sub-text {
+            font-size: 48px;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .small-text {
+            font-size: 20px;
+            margin-top: 50px;
+        }
+
+
+        .content-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            width: 100%;
+            padding: 20px;
+        }
+
+        .text-section {
+            width: 60%;
+            margin-right: -80px;
+        }
+
+        .text-section h2 {
+            font-size: 36px;
+            margin-bottom: 10px;
+            width: 662px;
+            height: 92px;
+            line-height: 43.57px;
+        }
+
+        .text-section p {
+            font-size: 20px;
+            line-height: 24.2px;
+            width: 400px;
+            height: 408px;
+        }
+
+        .image-section {
+            margin-top: 135px;
+            margin-right: 70px;
+            margin-left: -50px;
+        }
+
+        .image-section img {
+            width: 100%;
+            border-radius: 30px;
+            width: 469px;
+            height: 379px;
+        }
+
+        .button-container {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            gap: 10px;
+            font-family: 'SakuraFont', sans-serif;
+            margin-right: 40px;
+        }
+
+        .button {
+            background-color: #fff;
+            color: #000;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-family: 'SakuraFont', sans-serif;
+            width: 162px;
+            height: 41px;
+            top: 3041px;
+            left: -59px;
+            gap: 0px;
+            border-radius: 20px;
+            opacity: 0px;
+            font-weight: bold;
+        }
+        .button_active {
+            background-color: #EA9EC4;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-family: 'SakuraFont', sans-serif;
+            width: 162px;
+            height: 41px;
+            top: 3041px;
+            left: -59px;
+            gap: 0px;
+            border-radius: 20px;
+            opacity: 0px;
+            font-weight: bold;
+        }
+
+        .button:hover {
+            background-color: #EA9EC4;
+            transition: background-color 0.3s;
+            color: #fff;
+        }
+
+        .video-section {
+            margin-top: 50px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .video-container {
+            width: 992px;
+            height: 589px;
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 20px;
+            padding: 20px;
+            text-align: center;
+            margin-top: 150px;
+        }
+
+        .video-container iframe {
+            width: 909px;
+            height: 494px;
+            border-radius: 10px;
+        }
+
+        .extra-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            margin-top: -20px;
+            padding: 20px;
+        }
+
+        .extra-content .image {
+            width: 45%;
+            top: 4246px;
+            left: -633px;
+            gap: 0px;
+            border-radius: 30px 0px 0px 0px;
+            opacity: 0px;
+
+        }
+
+        .extra-content .image img {
+            width: 469px;
+            height: 359px;
+            border-radius: 30px;
+            
+        }
+
+        .extra-content .text {
+            width: 400px;
+            height: 312px;
+            font-size: 20px;
+            line-height: 24.2px;
+            margin-right: 90px;
+            margin-top: -90px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Кнопка меню -->
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+
+    <!-- Навигационная шторка -->
+    <div class="nav-menu" id="navMenu">
+        <a href="index.html">Главный экран</a>
+        <a href="contacts.html">Контакты</a>
+        <a href="about.html">О нас</a>
+    </div>
+    <div class="text-container">
+        <div class="main-text">Искусство Древней Японии</div>
+        <div class="main-text">Керамика</div>
+        <div class="sub-text"></div>
+        <div class="small-text">Японская философия является уникальным сплавом буддизма, синтоизма и конфуцианства, отражая глубокую связь с природой и стремление к гармонии.</div>
+    </div>
+    
+    <div class="video-section">
+        <div class="video-container">
+            <p>ИСТОРИЯ ЯПОНИИ НА КАРТЕ: Как люди попали в Японию? Кто такие камикадзе?</p>
+            <iframe src="https://www.youtube.com/watch?v=vH-tRKaWQis" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <div class="footer">
+       
+        <div class="content-container">
+            <div class="text-section">
+                <h2>Искусство Японии: Керамика</h2>
+                <p>Основные идеи: 
+
+                    Связь с природой: Керамика в древней Японии отражала глубокую связь с природой. Это выражалось как в выборе материалов (глина, природные красители), так и в форме изделий, часто напоминающих природные объекты. Техника создания «дзёмон», с её шнуровыми узорами, символизировала взаимодействие человека и природы.</p>
+            </div>
+            <div class="image-section">
+                <img src="2.png" alt="Описание изображения">
+            </div>
+        </div>
+        
+        <div class="extra-content">
+            <div class="image">
+                <img src="2.png" alt="Описание левого изображения">
+            </div>
+            <div class="text">
+                <p>Философские ценности: 
+
+                    Эстетика ваби-саби: Одной из главных ценностей японского искусства является философия ваби-саби — поиск красоты в простоте, несовершенстве и естественности. Японская керамика, особенно после периода Дзёмон, воплощала эту эстетику. Даже неровные или грубоватые сосуды считались красивыми благодаря их естественности и глубокой символике.</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        function toggleMenu() {
+            const navMenu = document.getElementById("navMenu");
+            navMenu.style.display = navMenu.style.display === "flex" ? "none" : "flex";
+        }
+    </script>
+
+</body>
+</html>

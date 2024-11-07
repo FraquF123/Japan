@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Становление Японии</title>
+    <style>
+        @font-face {
+            font-family: 'SakuraFont';
+            src: url('path_to_your_font_file.ttf') format('truetype');
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 200vh;
+            margin: 0;
+            background: url('1.png') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            overflow-y: scroll; /* Добавляем вертикальную прокрутку */
+        }
+        .menu-icon {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            font-size: 30px;
+            cursor: pointer;
+            color: #fff;
+            z-index: 10;
+        }
+
+        .nav-menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 250px;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            display: none;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            font-family: 'SakuraFont', sans-serif;
+            color: #fff;
+            z-index: 9;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+
+        .nav-menu a {
+            font-size: 20px;
+            color: #fff;
+            text-decoration: none;
+            margin-bottom: -30px;
+            margin-top: 50px;
+            padding: 10px;
+            display: block;
+            width: 100%;
+            border-radius: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-menu a:hover {
+            background-color: #EA9EC4;
+        }
+        
+
+        .text-container {
+            text-align: center;
+            font-family: 'SakuraFont', sans-serif;
+            width: 900px;
+            height: 116px;
+            gap: 0px;
+            margin-top: 150px; /* Добавляем отступ сверху */
+        }
+
+        .main-text {
+            font-size: 48px;
+            font-weight: bold;
+        }
+
+        .sub-text {
+            font-size: 48px;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .small-text {
+            font-size: 20px;
+            margin-top: 50px;
+        }
+
+        .content-block {
+            display: flex;
+            justify-content: space-between;
+           
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 20px;
+            width: 979px;
+            height: 461px;
+            margin-top: 200px;
+        }
+
+        .text-section {
+            width: 405px;
+            height: 254px;
+            margin-left: 20px;
+            font-family: 'SakuraFont', sans-serif;
+        }
+
+        .image-section {
+            width: 469px;
+            height: 300px;
+        }
+
+        .image-section img {
+            width: 469px;
+            height: 358px;
+            border-radius: 30px;
+            margin-top: 50px;
+            margin-left: -20px;
+        }
+
+        .extra-content-block {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 20px;
+            width: 992px;
+            height: 180px;
+            margin-top: 20px;
+        }
+        .text-section1 {
+
+            margin-left: 20px;
+            font-family: 'SakuraFont', sans-serif;
+            display: flex;
+            margin-top: 50px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        /* Дополнительные стили для заголовков и текста */
+        .title {
+            font-size: 36px;
+        }
+
+        .text {
+            font-size: 20px;
+        }
+        .title1 {
+            margin-top: 100px;
+            width: 610px;
+            height: 62px;
+        }
+
+        .text1 {
+            margin-top: -30px;
+            width: 934px;
+            height: 234px;
+            font-size: 20px;
+        }
+        .tradition-gallery {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 20px;
+        }
+        .tradition-item {
+        position: relative;
+        width: 300px;
+        cursor: pointer;
+        }
+        .tradition-item1 {
+        position: relative;
+        width: 300px;
+        margin-left: 130px;
+        cursor: pointer;
+        }
+        .tradition-item2 {
+        position: relative;
+        width: 300px;
+        cursor: pointer;
+        
+        }
+        .tradition-item img {
+        width: 307px;
+        height: 400px;
+        border-radius: 20px;
+        }
+        .tradition-item1 img {
+        width: 307px;
+        margin-left: -65px;
+        height: 400px;
+        border-radius: 20px;
+        }
+        .tradition-item2 img {
+        width: 307px;
+        height: 400px;
+        margin-left: -px;
+        border-radius: 20px;
+        }
+        .overlay {
+        position: absolute;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        width: 287px;
+        height: 30;
+        margin-bottom: 4px;
+        font-family: 'SakuraFont', sans-serif;
+        padding: 10px;
+        text-align: center;
+        border-radius: 20px;
+        }
+        .overlay h3 {
+        margin: 0;
+        font-size: 20px;
+        }
+        .overlay button {
+        margin-top: 10px;
+        padding: 5px 10px;
+        font-size: 14px;
+        width: 143px;
+        height: 39px;
+        border-radius: 20px;
+        cursor: pointer;
+        }
+        .overlay1 {
+        position: absolute;
+        bottom: 0;
+        font-family: 'SakuraFont', sans-serif;
+        margin-left: -65px;
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        width: 287px;
+        height: 30;
+        padding: 10px;
+        text-align: center;
+        border-radius: 20px;
+        margin-bottom: 4px;
+        }
+        .overlay1 h3 {
+        margin: 0;
+        font-size: 20px;
+        }
+        .overlay1 button {
+        margin-top: 10px;
+        padding: 5px 10px;
+        font-size: 14px;
+        width: 143px;
+        height: 39px;
+        border-radius: 20px;
+        cursor: pointer;
+        }
+
+        .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        justify-content: center;
+        align-items: center;
+        }
+        .modal-content {
+        background-color: #EA9EC4;
+        padding: 20px;
+        border-radius: 20px;
+        width: 80%;
+        font-family: 'SakuraFont', sans-serif;
+        max-width: 500px;
+        }
+        .close {
+        color: #ffffff;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
+        }
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin-top: 20px;
+            justify-items: center;
+            padding: 20px;
+            width: 100%;
+        }
+
+        /* Индивидуальные размеры и расположение для изображений */
+        .image-grid img {
+            border-radius: 25px;
+        }
+
+        /* Настройка размера для каждой картинки по примеру */
+        .image-grid img:nth-child(1) {
+            grid-column: 1;
+            grid-row: 1 / span 2;
+            width: 214px;
+            height: 327px;
+            margin-left: -0px;
+
+
+
+        }
+
+        .image-grid img:nth-child(2) {
+            grid-column: 2;
+            grid-row: 1;
+            width: 214px;
+            height: 214px;
+            margin-left: -30px;
+        }
+
+        .image-grid img:nth-child(3) {
+            grid-column: 3;
+            grid-row: 1 / span 2;
+            width: 214px;
+            height: 327px;
+            margin-left: -60px;
+            
+        }
+
+        .image-grid img:nth-child(4) {
+            grid-column: 4;
+            grid-row: 1;
+            width: 214px;
+            height: 209px;
+            margin-left: -90px;
+            
+        }
+
+        .image-grid img:nth-child(5) {
+            grid-column: 1;
+            grid-row: 3;
+            width: 214px;
+            height: 189px;
+            
+        }
+
+        .image-grid img:nth-child(6) {
+            grid-column: 2;
+            grid-row: 2 / span 2;
+            width: 214px;
+            height: 304px;
+            margin-left: -30px;
+            
+        }
+
+        .image-grid img:nth-child(7) {
+            grid-column: 3;
+            grid-row: 3;
+            width: 214px;
+            height: 189px;
+            margin-left: -55px;
+        }
+
+        .image-grid img:nth-child(8) {
+            grid-column: 4;
+            grid-row: 2 / span 2;
+            width: 214px;
+            height: 311px;
+            margin-left: -90px;
+        }
+        .container1 h1 {
+            text-align: center;
+            font-family: 'SakuraFont', sans-serif;
+
+
+        }
+        .container1 p {
+            text-align: center;
+            font-family: 'SakuraFont', sans-serif;
+
+
+        }
+        .container1 {
+            width: 992px;
+            height: 809px;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 20px;
+
+        }
+    </style>
+</head>
+<body>
+
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+
+    <div class="nav-menu" id="navMenu">
+        <a href="index.html">Главный экран</a>
+        <a href="contacts.html">Контакты</a>
+        <a href="about.html">О нас</a>
+    </div>
+
+    <div class="text-container">
+        <div class="main-text">Искусство Древней Японии</div>
+        <div class="sub-text"></div>
+        <div class="small-text">Японская философия является уникальным сплавом буддизма, синтоизма и конфуцианства, отражая глубокую связь с природой и стремление к гармонии.</div>
+    </div>
+    
+    <div class="content-block">
+        <div class="text-section">
+            <h2 class="title">Истоки японского искусства</h2>
+            <p class="text">Японское искусство имеет богатую и древнюю историю, которая насчитывает тысячи лет. Его корни уходят в доисторические времена и отражают взаимодействие между местной японской культурой и влияниями других азиатских цивилизаций, особенно Китая и Кореи. С течением времени японские художники и мастера развивали уникальные стили и методы, которые сделали их искусство узнаваемым по всему миру.</p>
+        </div>
+        <div class="image-section">
+            <img src="2.png" alt="Japanese Art">
+        </div>
+    </div>
+
+    <div class="extra-content-block">
+        <div class="text-section1">
+            <h2 class="title1">Традиции</h2>
+            <p class="text1">Древняя Япония была известна своим уважением к традициям, которые передавались из поколения в поколение. Одними из важнейших были традиции, связанные с ритуалами и духовными практиками, такие как поклонение предкам и духам природы (ками). Эти обычаи составляли важную часть японской культуры, связывая людей с окружающим миром и их историей.</p>
+        </div>
+        
+    </div>
+    
+    <div class="tradition-gallery">
+        <div class="tradition-item" onclick="showModal('ceramics')">
+            <img src="11.png" alt="Керамика">
+            <div class="overlay">
+                <h3>Керамика</h3>
+                <p>Керамические изделия, созданные в период Дземон, отличаются уникальными узорами и формами.</p>
+                <button>Подробнее</button>
+            </div>
+        </div>
+        <div class="tradition-item1" onclick="showModal('woodwork')">
+            <img src="22.png" alt="Изделия из дерева">
+            <div class="overlay1">
+                <h3>Изделия из дерева</h3>
+                <p>Традиционное японское ремесло включало создание предметов из дерева и бамбука.</p>
+                <button>Подробнее</button>
+            </div>
+        </div>
+        <div class="tradition-item2" onclick="showModal('ikebana')">
+            <img src="33.png" alt="Икебана">
+            <div class="overlay">
+                <h3>Икебана</h3>
+                <p>Искусство аранжировки цветов (икебана) было тесно связано с философией гармонии и покоя.</p>
+                <button>Подробнее</button>
+            </div>
+        </div>
+    </div>
+    
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="modal-text"></div>
+        </div>
+    </div>
+
+<div class="container1">
+        <h1>Галерея изображений</h1>
+        <p>Искусство древней Японии включало в себя не только создание предметов быта, но и различные формы изобразительного и прикладного искусства. Японцы уделяли особое внимание эстетике, что особенно заметно в архитектуре, каллиграфии и живописи того времени.</p>
+    <div class="image-grid">
+        <img src="image1.png" alt="Image 1">
+        <img src="image2.png" alt="Image 2">
+        <img src="image3.png" alt="Image 3">
+        <img src="image4.png" alt="Image 4">
+        <img src="image5.png" alt="Image 5">
+        <img src="image6.png" alt="Image 6">
+        <img src="image7.png" alt="Image 7">
+        <img src="image8.png" alt="Image 8">
+    </div>
+</div>
+
+
+    <script>
+
+        function toggleMenu() {
+            var navMenu = document.getElementById("navMenu");
+            navMenu.style.display = navMenu.style.display === "none" || navMenu.style.display === "" ? "flex" : "none";
+        }
+        function showModal(contentId) {
+            const modalText = {
+                'ceramics': 'Керамика: Керамические изделия, созданные в период Дземон, отличаются уникальными узорами и формами.',
+                'woodwork': 'Изделия из дерева: Традиционное японское ремесло включало создание предметов из дерева и бамбука.',
+                'ikebana': 'Икебана: Искусство аранжировки цветов (икебана) было тесно связано с философией гармонии и покоя.'
+            };
+            document.getElementById("modal-text").innerText = modalText[contentId];
+            document.getElementById("modal").style.display = "flex";
+        }
+    
+        function closeModal() {
+            document.getElementById("modal").style.display = "none";
+        }
+    </script>
+</body>
+</html>
